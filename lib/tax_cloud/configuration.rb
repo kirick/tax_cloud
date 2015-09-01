@@ -13,6 +13,7 @@ module TaxCloud #:nodoc:
     attr_accessor :read_timeout
 
     attr_accessor :ssl_version
+    attr_accessor :ssl_verify_mode
     attr_accessor :ssl_cert_file
     attr_accessor :ssl_cert_key_file
     attr_accessor :ssl_ca_cert_file
