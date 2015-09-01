@@ -12,6 +12,12 @@ module TaxCloud #:nodoc:
     # Savon client option read_timeout.
     attr_accessor :read_timeout
 
+    attr_accessor :ssl_version
+    attr_accessor :ssl_cert_file
+    attr_accessor :ssl_cert_key_file
+    attr_accessor :ssl_ca_cert_file
+    attr_accessor :ssl_cert_key_password
+
     def initialize
       @open_timeout = 2
       @read_timeout = 2

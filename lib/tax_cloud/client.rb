@@ -44,6 +44,12 @@ module TaxCloud #:nodoc:
       { wsdl: TaxCloud::WSDL_URL }.tap do |params|
         params[:open_timeout] = TaxCloud.configuration.open_timeout if TaxCloud.configuration.open_timeout
         params[:read_timeout] = TaxCloud.configuration.read_timeout if TaxCloud.configuration.read_timeout
+        params[:ssl_verify_mode] = TaxCloud.configuration.ssl_verify_mode if TaxCloud.configuration.ssl_verify_mode
+        params[:ssl_version] = TaxCloud.configuration.ssl_version if TaxCloud.configuration.ssl_version
+        params[:ssl_cert_file] = TaxCloud.configuration.ssl_cert_file if TaxCloud.configuration.ssl_cert_file
+        params[:ssl_cert_key_file] = TaxCloud.configuration.ssl_cert_key_file if TaxCloud.configuration.ssl_cert_key_file
+        params[:ssl_ca_cert_file] = TaxCloud.configuration.ssl_ca_cert_file if TaxCloud.configuration.ssl_ca_cert_file
+        params[:ssl_cert_key_password] = TaxCloud.configuration.ssl_cert_key_password if TaxCloud.configuration.ssl_cert_key_password
       end
     end
 
